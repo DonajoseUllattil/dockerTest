@@ -2,7 +2,7 @@ FROM microsoft/dotnet:1.1-sdk-projectjson
 COPY src /app
 WORKDIR /app
 RUN ["dotnet", "restore"]
-WORKDIR /app/RedisGeo
+WORKDIR /app/dockerTest
 RUN ["dotnet", "build"]
 EXPOSE 5000/tcp
 ENV ASPNETCORE_URLS https://*:5000
