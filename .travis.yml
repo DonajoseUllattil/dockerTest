@@ -26,7 +26,7 @@ after_success:
 - cd ..
 - pwd
 - mkdir /home/travis/build/DonajoseUllattil/build
-- cp -r /home/travis/build/DonajoseUllattil/dockerTest/ /home/travis/build/DonajoseUllattil/build/
+- cp -r /home/travis/build/DonajoseUllattil/ /home/travis/build/DonajoseUllattil/build/
 - tar -czf pack.tgz /home/travis/build/DonajoseUllattil/build/
 - export SSHPASS=$DEPLOY_PASS
 - sshpass -e scp -o stricthostkeychecking=no pack.tgz root@138.197.211.203:/home/dona/
