@@ -24,10 +24,9 @@ before_install:
   -in ssh_host_rsa_key.enc -out ssh_host_rsa_key -d
 after_success:
 - cd ..
+- cd ..
 - pwd
-- mkdir /home/travis/build/DonajoseUllattil/build
-- cp -r /home/travis/build/DonajoseUllattil/ /home/travis/build/DonajoseUllattil/build/
-- tar -czf pack.tgz /home/travis/build/DonajoseUllattil/build/
+- tar -czf pack.tgz /home/travis/build/DonajoseUllattil/
 - export SSHPASS=$DEPLOY_PASS
 - sshpass -e scp -o stricthostkeychecking=no pack.tgz root@138.197.211.203:/home/dona/
 env:
