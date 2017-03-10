@@ -18,7 +18,7 @@ matrix:
 script:
 - docker build -t blah .
 - docker tag blah:latest donajose/blah:production
-- docker login
+- docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - docker push donajose/blah:production 
 before_install:
 - openssl aes-256-cbc -K $encrypted_1e09b1a8aab1_key -iv $encrypted_1e09b1a8aab1_iv
