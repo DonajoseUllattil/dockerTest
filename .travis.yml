@@ -17,8 +17,8 @@ matrix:
     env: DOTNETCORE=1
 script:
 - docker build -t blah .
-- docker tag blah:latest $DOCKER_HUB_USERNAME/blah:production
-- docker push $DOCKER_HUB_USERNAME/blah:production 
+- docker tag blah:latest donajose/blah:production
+- docker push donajose/blah:production 
 before_install:
 - openssl aes-256-cbc -K $encrypted_1e09b1a8aab1_key -iv $encrypted_1e09b1a8aab1_iv
   -in ssh_host_rsa_key.enc -out ssh_host_rsa_key -d
